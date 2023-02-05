@@ -21,29 +21,67 @@ header{
 .containerAgent{
     width: 100%;
     display: flex;
+    justify-content: space-around;
     color: white;
 }
 
 .habilit{
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.habilit ul{
-    list-style: none;
-    margin-top: 5%;
-    margin-left: 5%;
+.habilit button{
+    cursor: pointer;
 }
 
-.habilit li{
+.abilitiesText{
     display: flex;
-    align-items: center;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1rem;
 }
 
-.habilit li img{
+.abilitiesTextP1{
+    display: none;
+    animation: mostrar 3s linear;
+}
+.abilitiesTextP2{
+    display: none;
+    animation: mostrar 3s linear;
+}
+
+@keyframes mostrar {
+    from{
+        height: 0%;
+    }
+    to{
+        height: 100%;
+    }
+}
+
+.habilit button{
+    max-width: 20vw;
+    margin-top: 5%;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    color: white;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.192);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.habilit button img{
     width: 15%;
     height: auto;
 }
+
 
 .agent h1{
     position: absolute;
@@ -59,6 +97,7 @@ header{
 }
 
 .aboutAgent{
+    max-width: 20vw;
     margin-top: 20%;
     padding: 2rem;
     height: 20%;
@@ -77,6 +116,12 @@ header{
 
 .selectAgent button{
     width: 10%;
+    background: rgba(0, 0, 0, 0.185);
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
 .selectAgent img{
