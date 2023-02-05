@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    height: 100%;
+    background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(93,9,121,1) 35%, rgba(214,0,255,1) 100%);
+}
+
+header{
+    padding: 1.85rem;
+    display: flex;
+    color: white;
+    background-color: transparent
+}
+
+.containerAgent{
+    width: 100%;
+    display: flex;
+    color: white;
+}
+
+.habilit{
+    display: flex;
+    align-items: center;
+}
+
+.habilit ul{
+    list-style: none;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.habilit li{
+    display: flex;
+    align-items: center;
+}
+
+.habilit li img{
+    width: 15%;
+    height: auto;
+}
+
+.agent h1{
+    position: absolute;
+    font-size: 10rem;
+    text-shadow: 10px 25px 25px #000000;
+    margin-left: 10rem;
+}
+
+.agent img{
+    position: relative;
+    width: 90%;
+    height: auto;
+}
+
+.aboutAgent{
+    margin-top: 20%;
+    padding: 2rem;
+    height: 20%;
+    background: rgba( 255, 255, 255, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 13.5px );
+    -webkit-backdrop-filter: blur( 13.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.selectAgent{
+    display: flex;
+    justify-content: center;
+}
+
+.selectAgent button{
+    width: 10%;
+}
+
+.selectAgent img{
+    width: 20%;
+    height: auto;
+}
