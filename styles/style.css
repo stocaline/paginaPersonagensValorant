@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@font-face {
+    font-family: "valorant";
+    src: url('../fonts/Valorant\ Font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -25,50 +32,24 @@ header{
     color: white;
 }
 
-.habilit{
+.abilit{
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.habilit button{
-    cursor: pointer;
-}
-
-.abilitiesText{
+.abilitCard{
     display: flex;
+    height: 10vh;
     padding: 1rem;
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: 1rem;
-}
-
-.abilitiesTextP1{
-    display: none;
-    animation: mostrar 3s linear;
-}
-.abilitiesTextP2{
-    display: none;
-    animation: mostrar 3s linear;
-}
-
-@keyframes mostrar {
-    from{
-        height: 0%;
-    }
-    to{
-        height: 100%;
-    }
-}
-
-.habilit button{
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out; 
     max-width: 20vw;
-    margin-top: 5%;
-    margin-bottom: 1rem;
-    display: flex;
-    gap: 1rem;
+    margin-top: 1rem;
     color: white;
     align-items: center;
+    
     background: rgba(255, 255, 255, 0.192);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 13.5px );
@@ -77,23 +58,56 @@ header{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.habilit button img{
+.abilitCard img{
     width: 15%;
     height: auto;
 }
 
+.abilitiesText{
+    margin-left: 1rem;
+    transform: translateY(44%);
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+}
+
+.abilitiesText p{
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.1s;
+    transform: translateY(100px);
+}
+
+
+.abilitCard:hover{
+    flex-grow: 0.1;
+    height: 20vh;
+}
+
+.abilitCard:hover .abilitiesText{
+    transform: translateX(0px);
+} 
+
+.abilitCard:hover .abilitiesText p{
+    opacity: 1;
+    transform: translateX(0px);
+} 
+
 
 .agent h1{
+    top: 35vh;
+    left: 25vw;
     position: absolute;
-    font-size: 10rem;
-    text-shadow: 10px 25px 25px #000000;
-    margin-left: 10rem;
+    font-family: 'valorant', 'Roboto', sans-serif;
+    font-size: 7rem;
+    text-shadow: 10px 10px 10px #000000;
+    transform: rotate(270deg);
 }
 
 .agent img{
     position: relative;
     width: 90%;
     height: auto;
+    transition: all 0.5s ease-in-out;
 }
 
 .aboutAgent{
@@ -127,4 +141,8 @@ header{
 .selectAgent img{
     width: 20%;
     height: auto;
+}
+
+.selectAgent button:hover{
+    background-color: rgba(247, 247, 247, 0.158);
 }
