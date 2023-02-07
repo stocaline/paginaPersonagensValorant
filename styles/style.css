@@ -16,6 +16,7 @@
 body{
     height: 100%;
     background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(93,9,121,1) 35%, rgba(214,0,255,1) 100%);
+    position: static;
 }
 
 header{
@@ -93,28 +94,32 @@ header{
 } 
 
 
-.agent h1{
-    top: 35vh;
-    left: 25vw;
-    position: absolute;
+.containerAbout{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10vh;
+}
+
+.containerAbout h1{
     font-family: 'valorant', 'Roboto', sans-serif;
-    font-size: 7rem;
-    text-shadow: 10px 10px 10px #000000;
-    transform: rotate(270deg);
+    font-size: 5rem;
+    text-shadow: 5px 5px 5px #000000;
 }
 
 .agent img{
     position: relative;
     width: 90%;
     height: auto;
+    left: 4vw;
     transition: all 0.5s ease-in-out;
+    transform: translate(-50% -50%);
 }
 
 .aboutAgent{
     max-width: 20vw;
     margin-top: 20%;
     padding: 2rem;
-    height: 20%;
+    height: auto;
     background: rgba( 255, 255, 255, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 13.5px );
@@ -130,17 +135,20 @@ header{
 
 .selectAgent button{
     width: 10%;
+    height: 10vh;
     background: rgba(0, 0, 0, 0.185);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 13.5px );
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
 }
 
 .selectAgent img{
-    width: 20%;
+    max-width: 50%;
     height: auto;
+    transform: translate(-50% -50%);
 }
 
 .selectAgent button:hover{
