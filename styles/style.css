@@ -14,7 +14,7 @@
 }
 
 body{
-    height: 100%;
+    height: 100vh;
     background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(93,9,121,1) 35%, rgba(214,0,255,1) 100%);
     position: static;
 }
@@ -28,7 +28,8 @@ header{
 
 .containerAgent{
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-around;
     color: white;
 }
@@ -128,12 +129,12 @@ header{
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.selectAgent{
+#menuAgent{
     display: flex;
     justify-content: center;
 }
 
-.selectAgent button{
+#menuAgent button{
     width: 10%;
     height: 10vh;
     background: rgba(0, 0, 0, 0.185);
@@ -142,15 +143,14 @@ header{
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    overflow: hidden;
 }
 
-.selectAgent img{
+#menuAgent img{
     max-width: 50%;
     height: auto;
     transform: translate(-50% -50%);
 }
 
-.selectAgent button:hover{
+#menuAgent button:hover{
     background-color: rgba(247, 247, 247, 0.158);
 }
