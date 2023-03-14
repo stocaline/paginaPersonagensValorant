@@ -26,6 +26,11 @@ header{
     background-color: transparent
 }
 
+#backgroundImg{
+    position: absolute;
+    transform: translateX(15rem) translateY(-10rem);
+}
+
 .containerAgent{
     width: 100%;
     display: grid;
@@ -132,6 +137,7 @@ header{
 #menuAgent{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 #menuAgent button{
@@ -143,11 +149,12 @@ header{
     -webkit-backdrop-filter: blur( 13.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
 }
 
 #menuAgent img{
-    max-width: 50%;
-    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     transform: translate(-50% -50%);
 }
 
