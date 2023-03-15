@@ -15,8 +15,9 @@
 
 body{
     height: 100vh;
-    background: linear-gradient(5deg, rgba(2,0,36,1) 0%, rgba(93,9,121,1) 35%, rgba(214,0,255,1) 100%);
     position: static;
+    background-color: crimson;
+    transition: background-color 1s ease;      
 }
 
 header{
@@ -86,8 +87,7 @@ header{
 
 
 .abilitCard:hover{
-    flex-grow: 0.1;
-    height: 20vh;
+    height: min-content;
 }
 
 .abilitCard:hover .abilitiesText{
@@ -109,7 +109,7 @@ header{
 .containerAbout h1{
     font-family: 'valorant', 'Roboto', sans-serif;
     font-size: 5rem;
-    text-shadow: 5px 5px 5px #000000;
+    text-shadow: 5px 5px 0px #000000;
 }
 
 .agent img{
@@ -117,15 +117,14 @@ header{
     width: 90%;
     height: auto;
     left: 4vw;
-    transition: all 0.5s ease-in-out;
     transform: translate(-50% -50%);
 }
 
 .aboutAgent{
-    max-width: 20vw;
+    max-width: fit-content;
     margin-top: 20%;
     padding: 2rem;
-    height: auto;
+    height: fit-content;
     background: rgba( 255, 255, 255, 0.35 );
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 13.5px );
@@ -150,6 +149,7 @@ header{
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     overflow: hidden;
+    flex: 1 0 10vw;
 }
 
 #menuAgent img{
@@ -160,4 +160,37 @@ header{
 
 #menuAgent button:hover{
     background-color: rgba(247, 247, 247, 0.158);
+}
+
+
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.prev-button {
+  left: 0;
+}
+
+.next-button {
+  right: 0;
 }
