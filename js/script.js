@@ -5,6 +5,8 @@ const agentDesc = document.querySelector("#aboutAgent")
 const agentImg = document.querySelector("#agentImg")
 const agentBackgroundImg = document.querySelector("#backgroundImg")
 
+
+const abilitCard = document.querySelectorAll(".abilitCard")
 const ability1 = document.querySelector("#abilit1")
 const ability2 = document.querySelector("#abilit2")
 const ability3 = document.querySelector("#abilit3")
@@ -50,33 +52,32 @@ selectAgent.forEach(button => {
         const agentData = await fetchApi(button.getAttribute("uuid"))
 
         agentName.innerHTML = agentData.data.displayName
+
         agentDesc.innerText = `${agentData.data.description}`
+        
         agentImg.src = agentData.data.fullPortrait
         agentBackgroundImg.src = agentData.data.background
-
+        
         ability1.src = agentData.data.abilities[0].displayIcon
         ability2.src = agentData.data.abilities[1].displayIcon
         ability3.src = agentData.data.abilities[2].displayIcon
         ability4.src = agentData.data.abilities[3].displayIcon
-
+        
         abilitName1.innerHTML = `<h3>${agentData.data.abilities[0].displayName}</h3>`
         abilitName1.innerHTML += `<p>${agentData.data.abilities[0].description}</p>`
-
+        
         abilitName2.innerHTML = `<h3>${agentData.data.abilities[1].displayName}</h3>`
         abilitName2.innerHTML += `<p>${agentData.data.abilities[1].description}</p>`
-
+        
         abilitName3.innerHTML = `<h3>${agentData.data.abilities[2].displayName}</h3>`
         abilitName3.innerHTML += `<p>${agentData.data.abilities[2].description}</p>`
-
+        
         abilitName4.innerHTML = `<h3>${agentData.data.abilities[3].displayName}</h3>`
         abilitName4.innerHTML += `<p>${agentData.data.abilities[3].description}</p>`
         
         document.body.style.background = `linear-gradient(-110deg, #${agentData.data.backgroundGradientColors.join(", #")})`
-    })
+      })
 })
-
-
-
 
 const slider = document.querySelector('.slider');
 const prevButton = document.querySelector('.prev-button');
