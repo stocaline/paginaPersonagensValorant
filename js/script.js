@@ -78,19 +78,24 @@ selectAgent.forEach(button => {
         document.body.style.background = `linear-gradient(-110deg, #${agentData.data.backgroundGradientColors.join(", #")})`
       })
 })
-
 const slider = document.querySelector('.slider');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
 let currentPosition = 0;
 
 function moveSlider(direction) {
-  if (direction === 'prev' && currentPosition > 0) {
+  if (direction === 'prev') {
     currentPosition--;
-  } else if (direction === 'next' && currentPosition < slider.children.length - 1) {
+    if (currentPosition < 0) {
+      currentPosition = slider.children.length - 2; // Subtraia 2 para ignorar a cópia
+    }
+  } else if (direction === 'next') {
     currentPosition++;
+    if (currentPosition >= slider.children.length - 1) { // Subtraia 1 para ignorar a cópia
+      currentPosition = 0;
+    }
   }
-  slider.style.transform = `translateX(-${currentPosition * 20}rem)`;
+  slider.style.transform = `translateX(-${currentPosition * 100}%)`;
 }
 
 prevButton.addEventListener('click', () => moveSlider('prev'));
