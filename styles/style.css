@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
 @font-face {
     font-family: "valorant";
     src: url('../fonts/Valorant\ Font.ttf') format('truetype');
@@ -6,33 +7,48 @@
     font-style: normal;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-body{
+.block{
+    position: absolute;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: crimson;
+    z-index: 3;
+    padding: 5rem;
+}
+
+.block img{
+    width: 90%;
+    justify-self: center;
+}
+
+body {
     height: 100vh;
     position: static;
     background-color: crimson;
-    transition: background-color 1s ease;      
+    transition: background-color 1s ease;
 }
 
-header{
+header {
     padding: 1.85rem;
     display: flex;
     color: white;
     background-color: transparent
 }
 
-#backgroundImg{
+#backgroundImg {
     position: absolute;
     transform: translateX(15rem) translateY(-10rem);
 }
 
-.containerAgent{
+.containerAgent {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
@@ -40,45 +56,45 @@ header{
     color: white;
 }
 
-.abilit{
+.abilit {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.abilitCard{
+.abilitCard {
     display: flex;
     height: 10vh;
     padding: 1rem;
     cursor: pointer;
     overflow: hidden;
-    transition: all 0.6s ease-in-out; 
+    transition: all 0.6s ease-in-out;
     max-width: 20vw;
     margin-top: 1rem;
     color: white;
     align-items: center;
-    
+
     background: rgba(255, 255, 255, 0.192);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-.abilitCard img{
+.abilitCard img {
     width: 15%;
     height: auto;
 }
 
-.abilitiesText{
+.abilitiesText {
     margin-left: 1rem;
     transform: translateY(44%);
     transition: all 0.5s ease-in-out;
     transition-delay: 0.1s;
 }
 
-.abilitiesText p{
+.abilitiesText p {
     opacity: 0;
     transition: all 0.5s ease-in-out;
     transition-delay: 0.1s;
@@ -86,33 +102,34 @@ header{
 }
 
 
-.abilitCard:hover{
+.abilitCard:hover {
     height: min-content;
 }
 
-.abilitCard:hover .abilitiesText{
+.abilitCard:hover .abilitiesText {
     transform: translateX(0px);
-} 
+}
 
-.abilitCard:hover .abilitiesText p{
+.abilitCard:hover .abilitiesText p {
     opacity: 1;
     transform: translateX(0px);
-} 
+}
 
 
-.containerAbout{
+.containerAbout {
     display: flex;
     flex-direction: column;
     margin-top: 10vh;
 }
 
-.containerAbout h1{
+.containerAbout h1 {
     font-family: 'valorant', 'Roboto', sans-serif;
     font-size: 5rem;
     text-shadow: 5px 5px 0px #000000;
+    z-index: 1;
 }
 
-.agent img{
+.agent img {
     position: relative;
     width: 90%;
     height: auto;
@@ -120,45 +137,48 @@ header{
     transform: translate(-50% -50%);
 }
 
-.aboutAgent{
+.aboutAgent {
     max-width: fit-content;
     margin-top: 20%;
     padding: 2rem;
     height: fit-content;
-    background: rgba( 255, 255, 255, 0.35 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-#menuAgent{
+#menuAgent {
     display: flex;
     justify-content: center;
     width: 100%;
+    background: transparent;
+    z-index: 10;
 }
 
-#menuAgent button{
+.iconAgent {
     width: 10%;
     height: 10vh;
     background: rgba(0, 0, 0, 0.185);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 13.5px );
-    -webkit-backdrop-filter: blur( 13.5px );
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(13.5px);
+    -webkit-backdrop-filter: blur(13.5px);
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    cursor: pointer;
     overflow: hidden;
     flex: 1 0 10vw;
 }
 
-#menuAgent img{
+.iconAgent img {
     max-width: 100%;
     max-height: 100%;
     transform: translate(-50% -50%);
 }
 
-#menuAgent button:hover{
+.iconAgent:hover {
     background-color: rgba(247, 247, 247, 0.158);
 }
 
@@ -177,26 +197,39 @@ header{
 .slider {
     display: flex;
     width: 100%;
+    transform: translateX(-270%);
     transition: transform 0.5s ease-in-out;
-  }
-  
-  .slider{
-    flex: 0 0 calc(100% / 8); /* Define o tamanho de cada item para ocupar 1/8 do container */
-  }
-  
-  .prev-button,
-  .next-button {
+}
+
+.slider {
+    flex: 0 0 calc(100% / 8);
+}
+
+.prev-button,
+.next-button {
     position: absolute;
+    width: 10%;
+    height: 10vh;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    overflow: hidden;
+    font-size: 3rem;
     z-index: 1;
-  }
-  
-  .prev-button {
+}
+
+.prev-button:hover,
+.next-button:hover {
+    background-color: #d8d8d8;
+}
+
+.prev-button {
     left: 0;
-  }
-  
-  .next-button {
+}
+
+.next-button {
     right: 0;
-  }
+}
