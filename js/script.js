@@ -2,6 +2,7 @@ const block = document.querySelector(".block");
 const menuAgent = document.querySelector("#menuAgent");
 const selectAgent = document.querySelectorAll(".iconAgent");
 const agentName = document.querySelector("#agentName")
+const agentType = document.querySelector("#agentType")
 const agentDesc = document.querySelector("#aboutAgent")
 const agentImg = document.querySelector("#agentImg")
 const agentBackgroundImg = document.querySelector("#backgroundImg")
@@ -43,6 +44,7 @@ const agents = [
   "eb93336a-449b-9c1b-0a54-a891f7921d69", //Phoenix
   "9f0d8ba9-4140-b941-57d3-a7ad57c6b417", //Brimstone
   "bb2a4828-46eb-8cd1-e765-15848195d751", //Neon
+  "7f94d92c-4234-0a36-9646-3a87eb8b5c89", //Yoru
   
 ]
 
@@ -80,6 +82,8 @@ selectAgent.forEach(button => {
         block.style.display = "none"
 
         agentName.innerHTML = agentData.data.displayName
+        agentType.innerHTML = `<img src="${agentData.data.role.displayIcon}" width="10%"></img>`
+        agentType.innerHTML += `<h2>${agentData.data.role.displayName}</h2>`
 
         agentDesc.innerText = `${agentData.data.description}`
         

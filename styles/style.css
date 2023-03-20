@@ -129,6 +129,11 @@ header {
     z-index: 1;
 }
 
+#agentType{
+    display: flex;
+    gap: 1rem;
+}
+
 .agent img {
     position: relative;
     width: 90%;
@@ -224,4 +229,33 @@ header {
 
 .next-button {
     right: 0;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .containerAgent{
+        grid-template-columns: 1fr;
+    }
+    
+    .containerAbout{
+        order: -1
+    }
+
+    .agent{
+        order: 1
+    }
+
+    .abilit{
+        order: 2
+    }
+
+    #backgroundImg{
+        width: 70%;
+        transform: translateX(-10%) translateY(25rem);
+    }
+
+    .agent img {
+        width: 100%;
+    }
+
 }
