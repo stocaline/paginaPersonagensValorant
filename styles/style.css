@@ -187,22 +187,14 @@ header {
 .slider-container {
     position: relative;
     overflow: hidden;
-
-    display: flex;
-    justify-content: center;
     width: 100%;
     height: auto;
 }
 
 .slider {
+    width: 80%;
     display: flex;
-    width: 100%;
-    transform: translateX(-270%);
     transition: transform 0.5s ease-in-out;
-}
-
-.slider {
-    flex: 0 0 calc(100% / 8);
 }
 
 .prev-button,

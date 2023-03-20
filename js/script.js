@@ -56,23 +56,17 @@ const fetchApi = async (uuid) => {
 function moveSlider(direction) {
   if (direction === 'prev') {
     currentPosition--;
-    if (currentPosition < 2) {
-      currentPosition = slider.children.length - 7;
+    if (currentPosition < 0) {
+      currentPosition = slider.children.length - 8;
     }
   } else if (direction === 'next') {
     currentPosition++;
-    if (currentPosition >= slider.children.length - 6) {
-      currentPosition = 2;
+    if (currentPosition >= slider.children.length - 7) {
+      currentPosition = 0;
     }
   }
-  slider.style.transform = `translateX(-${currentPosition * 100}%)`;
-  // if(currentPosition == 1){
-  //   slider.style.transform = `translateX(-${currentPosition * 350}%)`;
-  // } else  if(currentPosition == 2){
-  //   slider.style.transform = `translateX(-${currentPosition * 215}%)`;
-  // }else {
-  //   slider.style.transform = `translateX(-${currentPosition * 100}%)`;
-  // }
+  slider.style.transform = `translateX(-${currentPosition * 12.5}%)`;
+
 }
 
 prevButton.addEventListener('click', () => moveSlider('prev'));
