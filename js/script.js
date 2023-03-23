@@ -75,11 +75,16 @@ prevButton.addEventListener('click', () => moveSlider('prev'));
 nextButton.addEventListener('click', () => moveSlider('next'));
 
 
-selectAgent.forEach(button => {
+selectAgent.forEach((button, i) => {
     button.addEventListener("click", async () => {
         const agentData = await fetchApi(button.getAttribute("uuid"))
 
+        currentPosition = i
+
         block.style.display = "none"
+        if(currentPosition <= slider.children.length - 4){
+          slider.style.transform = `translateX(-${(currentPosition - 5) * 14}%)`;
+        }
 
         agentName.innerHTML = agentData.data.displayName
         agentType.innerHTML = `<img src="${agentData.data.role.displayIcon}" width="10%"></img>`
@@ -107,6 +112,6 @@ selectAgent.forEach(button => {
         abilitName4.innerHTML = `<h3>${agentData.data.abilities[3].displayName}</h3>`
         abilitName4.innerHTML += `<p>${agentData.data.abilities[3].description}</p>`
         
-        document.body.style.background = `linear-gradient(-110deg, #${agentData.data.backgroundGradientColors.join(", #")})`
+        document.body.style.background = `linear-gradient(130deg, #${agentData.data.backgroundGradientColors.join(", #")})`
       })
 })

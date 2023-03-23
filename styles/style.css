@@ -30,7 +30,7 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     position: static;
     background-color: crimson;
     transition: background-color 1s ease;
@@ -131,6 +131,7 @@ header {
 
 #agentType{
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
