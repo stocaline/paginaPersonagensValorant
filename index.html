@@ -19,45 +19,57 @@
         <main>
                 <img id="backgroundImg" src="" alt="">
                 <div class="containerAgent">
-                        <div class="abilit">
-                                <div class="abilitCard">
-                                        <img id="abilit1" src="">
+                        <div class="agent">
+                                <img id="agentImg" src="" alt="agent">
+                        </div>
+                        
+                        <div class="containerAbout">
+                                <h1 id="agentName"></h1>
+                                <div id="agentType">
+                                </div>
+                        </div>
+                        
+                        <div class="tab-conteiner">
+                                <div class="tab-bar">
+                                        <button class="tab-link" onclick="openTab(event, 'tab1')"><img class="tab-button-img" src="./img/infoIcon.png"></button>
+                                        <button class="tab-link" onclick="openTab(event, 'tab2')"><img id="abilit1" class="tab-button-img" src=""></button>
+                                        <button class="tab-link" onclick="openTab(event, 'tab3')"><img id="abilit2" class="tab-button-img" src=""></button>
+                                        <button class="tab-link" onclick="openTab(event, 'tab4')"><img id="abilit3" class="tab-button-img" src=""></button>
+                                        <button class="tab-link" onclick="openTab(event, 'tab5')"><img id="abilit4" class="tab-button-img" src=""></button>
+                                </div>
+                                      
+                                <div id="tab1" class="tab-content">
+                                        <h3>Sobre</h3>
+                                        <p id="aboutAgent"></p>
+                                </div>
+        
+                                <div id="tab2" class="tab-content">
                                         <div id="abilitName1" class="abilitiesText">
                                         </div>
                                 </div>
 
-                                <div class="abilitCard">
-                                        <img id="abilit2" src="">
+                                <div id="tab3" class="tab-content">
                                         <div id="abilitName2" class="abilitiesText">
                                         </div>
                                 </div>
 
-                                <div class="abilitCard">
-                                        <img id="abilit3" src="">
+                                <div id="tab4" class="tab-content">
                                         <div id="abilitName3" class="abilitiesText">
                                         </div>
                                 </div>
 
-                                <div class="abilitCard">
-                                        <img id="abilit4" src="">
+                                <div id="tab5" class="tab-content">
                                         <div id="abilitName4" class="abilitiesText">
                                         </div>
                                 </div>
                         </div>
 
-                        <div class="agent">
-                                <img id="agentImg" src="" alt="agent">
-                        </div>
-                        <div class="containerAbout">
-                                <h1 id="agentName"></h1>
-                                <div id="agentType">
-                                </div>
-                                
-                                <div class="aboutAgent">
-                                        <h3>Sobre</h3>
-                                        <p id="aboutAgent"></p>
-                                </div>
-                        </div>
+
+
+
+
+
+
                 </div>
 
                 <div id="menuAgent" class="slider-container">

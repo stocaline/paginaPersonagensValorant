@@ -47,6 +47,8 @@ const agents = [
   "7f94d92c-4234-0a36-9646-3a87eb8b5c89", //Yoru
   
 ]
+prevButton.addEventListener('click', () => moveSlider('prev'));
+nextButton.addEventListener('click', () => moveSlider('next'));
 
 const fetchApi = async (uuid) => {
   const response = await fetch(baseURL + uuid + language)
@@ -71,9 +73,20 @@ function moveSlider(direction) {
 
 }
 
-prevButton.addEventListener('click', () => moveSlider('prev'));
-nextButton.addEventListener('click', () => moveSlider('next'));
+function openTab(evt, tabId) {
+  var tabContents = document.getElementsByClassName("tab-content");
+  for (var i = 0; i < tabContents.length; i++) {
+    tabContents[i].style.display = "none";
+  }
 
+  var tabLinks = document.getElementsByClassName("tab-link");
+  for (var i = 0; i < tabLinks.length; i++) {
+    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+  }
+
+  document.getElementById(tabId).style.display = "block";
+  evt.currentTarget.className += " active";
+}
 
 selectAgent.forEach((button, i) => {
     button.addEventListener("click", async () => {
