@@ -125,6 +125,7 @@ selectAgent.forEach((button, i) => {
         abilitName4.innerHTML = `<h3>${agentData.data.abilities[3].displayName}</h3>`
         abilitName4.innerHTML += `<p>${agentData.data.abilities[3].description}</p>`
         
+        document.getElementsByClassName("tab-link")[0].click()
         document.body.style.background = `linear-gradient(130deg, #${agentData.data.backgroundGradientColors.join(", #")})`
       })
 })
